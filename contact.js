@@ -10,15 +10,15 @@ function submitData() {
     // }
   
     if (name === "") {
-      return alert("Name must be filled!");
+      return alert("Nama harus diisi!");
     } else if (email === "") {
-      return alert("Email must be filled!");
+      return alert("Email harus diisi!");
     } else if (number === "") {
-      return alert("Number must be filled!");
+      return alert("No Telp harus diisi!");
     } else if (subject === "") {
-      return alert("Subject must be selected!");
+      return alert("Posisi harus dipilih!");
     } else if (message === "") {
-      return alert("Message must be filled!");
+      return alert("Pesan harus diisi!");
     }
   
     let emailReceiver = "leonkmoena@gmail.com";
