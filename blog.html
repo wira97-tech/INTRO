@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="./css/blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img src="./aset/logo.png" alt="logo" />
+          </li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="active" href="blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </nav>
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="addBlog(event)">
+            <h1>ADD MY PROJECT</h1>
+            <div>
+                <label for="input-blog-title">Project Name</label>
+                <input type="text" id="input-blog-title" />
+            </div>
+            <div class ="date">
+            <div style="
+                margin-right: 20px;">
+                <label for="input-start-date">Start Date</label>
+                <input type="date" id="input-start-date"/>
+            </div>
+            <div>
+                <label for="input-end-date">End Date</label>
+                <input type="date" id="input-end-date"/>
+            </div>
+            </div>
+            <div>
+              <label for="input-blog-content">Content</label>
+              <textarea id="input-blog-content"></textarea>
+            </div>
+            <div>
+                <label for="input-tech"> Technologies</label>
+            </div>
+            <div class="check">
+              <div class="left">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="nodejs">
+                    <label for="nodejs" style >Node Js</label>
+                  </li>
+                  <li>
+                      <input type="checkbox" id="reactjs">
+                      <label for="reactjs">React Js</label>
+                  </li>
+                  </ul>
+              </div>
+              <div class="right">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="nextjs"/>
+                    <label for="nextjs">Next Js</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="typescript"/>
+                    <label for="typescript">TypeScript</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <label>File Upload</label>
+              <div class="input-blog-image-group">
+                <label for="input-blog-image">
+                  <p>Upload</p>
+                  <img src="./aset/file.png" />
+                </label>
+                <input type="file" id="input-blog-image" hidden />
+              </div>
+            </div>
+            <div class="button-group"> 
+              <button style="
+                background-color:#111727;
+                color:azure;
+                width:100px;
+                border-radius: 15px;
+                margin-left: 402px;
+                "
+              >Post Blog</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </hr>
+    
+  <div class="grid-content">
+    <div>
+      <div class="title-proj">
+        <h1>My Blog</h1>
+      </div>
+      <ul>
+        <li>
+          <div id="contents" class="blog-list">
+            <div class="blog-list-item">
+              <div class="blog-image">
+                <img src="./aset/1.jpg" alt="" />
+              </div>
+              <div class="blog-content">
+                <h1>
+                  <a href="blog-detail.html"
+                  >Dumbways Mobile App-2021</a
+                  >
+                </h1>
+                <div class="detail-blog-content">
+                  Durasi 3 Bulan
+                </div>
+                <p>
+                  Ketimpangan sumber daya manusia (SDM) di sektor digital masih
+                  menjadi isu yang belum terpecahkan. Berdasarkan penelitian
+                <div class="social">
+                    <i class="fa-brands fa-google-play"></i>&nbsp;
+                    <i class="fa-brands fa-android"></i>&nbsp;
+                    <i class="fa-brands fa-java"></i>&nbsp;
+                </div>
+                </p>
+                <div class="btn-group">
+                  <button class="btn-edit">Edit Post</button>
+                  <button class="btn-post">Delete Post</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <script src="js/blog.js"></script>
+  </body>
+</html>
