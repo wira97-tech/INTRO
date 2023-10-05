@@ -341,4 +341,11 @@ margin-left: -55px;
 }
 .icon-check{
   display: flex;
+  width:50px;
+  height: 50px;
+    margin-right: 10px;
+}
+.duration{
+  margin-right: 5px;
+  background-color: #000;
 }
