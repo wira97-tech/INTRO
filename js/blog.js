@@ -52,14 +52,20 @@ let duration= endDate - startDate;
 let days = Math.floor(duration / (1000 * 60 * 60 * 24));
 let weeks = Math.floor(days / 7);
 let months = Math.floor(days/30);
+let adddays = days % 7;
 
-  if (days > 0) {
-  duration = days + " " + "Hari";
-  if (weeks > 0) 
-  duration = weeks + " "+ "minggu";
-  if (months >0) 
-  duration = months + " "+ "Bulan";
+  if (days > 0 ) {
+    duration = days + " " + "Hari";}
+  if (days < 7 ) {
+    duration = days + " " + "Hari";}
+  if (days > 7) {
+    duration = weeks + " " + "Minggu" + 
+    " " + adddays + " " + "Hari";}
+  if (days >= 30) {
+    duration = months + " " + "Bulan" + " " + 
+    adddays + " " + "Hari";
   }
+  
 
   let blog = {
     title,
@@ -77,6 +83,7 @@ let months = Math.floor(days/30);
     icnextjs,
     ictypescript,
     duration,
+    adddays,
   
   }
 
@@ -202,5 +209,7 @@ function getDistanceTime(time) {
 setInterval(function () {
   renderBlog();
 }, 3000);
+
+
 
 

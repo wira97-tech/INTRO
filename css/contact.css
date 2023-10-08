@@ -17,8 +17,8 @@ nav {
     background-color: #f4f3f3;
     display: flex;
     align-items: center;
-    height: 10vh;
-    width: 100vw;
+    height: 70px;
+    width: 100%;
 }
 
 nav ul {
@@ -96,3 +96,75 @@ button {
 button:hover {
     background-color: #c0c3c7;
 }
+
+#barsmenu{
+    display:none;
+  }
+  .hamburger-nav-container{
+    font-size: 18px;
+    list-style-type: none;
+    display:none;
+  }
+  .hamburger-nav-container a{
+    text-decoration: none;
+    color:#fff;
+    background-color: #9a9a9a;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #fff;
+  }
+  
+  .hamburger-nav-container .hamburger-active{
+    text-decoration: none;
+    color: #f4f3f3;
+    background-color: #151a21;
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    border: solid 0px #fff;
+    justify-content: center;
+    border-radius: 10px;
+  
+  }
+  
+  .hamburger-nav-container :hover{
+    background-color: orangered;
+    
+}
+  
+  @media only screen and (max-width: 900px){
+    .blog-form .form-container{
+      width: 100%;
+    }
+    .button-group{
+      margin-left: 190px;
+    
+    }
+    .hamburger-nav-container{
+      margin:0.1%;
+    }
+  
+  }
+  @media only screen and (max-width:550px){
+   .blog-form.form-container{
+      width: 100%;
+    }
+    #barsmenu{
+      display:block;
+      margin-top: -25px;
+      margin-left: 0.1%;
+    }
+    form{
+        width: 80%;
+    }
+    /* button {
+        margin-left: 64%;
+       
+    } */
+    .item-collapse{
+      display: none;
+    }
+    
+  }

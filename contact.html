@@ -1,8 +1,9 @@
 <html>
     <head>
         <title>Contact Form</title>
-        <link rel="stylesheet" href="./css/contact.css">
-        <link rel="stylesheet" href= "https://fontawesome.com/icons/sort-down?f=classic&s=solid">
+        <link rel="stylesheet" href="./css/contact.css"/>
+        <link rel="stylesheet" href= "https://fontawesome.com/icons/sort-down?f=classic&s=solid"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     </head>
     <body>
         <nav>
@@ -11,18 +12,29 @@
                     <li>
                         <img src="./aset/logo.png" alt="logo" />
                     </li>
-                    <li>
+                    <li class ="item-collapse">
                         <a href="index.html">Home</a>
                     </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
+                    <li class="item-collapse">
+                        <a href="blog.html">My Project</a>
                     </li>
                 </ul>
             </div>
-            <div class="nav-right">
+            <div class="nav-right item-collapse">
                 <a href="contact.html">Contact Me</a>
             </div>
+            <div class="nav-right" id="barsmenu">
+             <button style="background-color: transparent; border:none;cursor:pointer;" 
+                     onclick="openHamburger()">
+                <i class="fa-2x fa-solid fa-bars"></i>
+             </button>   
+            </div>
         </nav>
+        <div class="hamburger-nav-container" id="hamburger-nav-container">
+          <a href ="index.html">Home</a>
+          <a href="blog.html" >My Project</a>
+          <a href="contact.html" class="hamburger-active">Contact Me</a>
+        </div>
         <div>
             <h1 style="text-align: center;
                 margin: 50px 0;
@@ -65,5 +77,6 @@
             </div>
         </form>
         <script src="./js/contact.js"></script>
+        <script src="./js/index.js"></script>
     </body>
 </html>

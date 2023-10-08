@@ -15,8 +15,8 @@ nav {
     background-color: #f4f3f3;
     display: flex;
     align-items: center;
-    height: 10vh;
-    width: 100vw;
+    height: 60px;
+    width: 100%;
 }
 
 nav ul {
@@ -80,4 +80,106 @@ section {
     margin-right: 20px;
     margin-top: 20px;
     font-size: 30px;
+}
+#barsmenu{
+    display: none;
+}
+
+.hamburger-nav-container{
+    font-size: 18px;
+    list-style-type: none;
+    display: none;
+    
+}
+
+.hamburger-nav-container a{
+    text-decoration: none;
+    color: black;
+    background-color: #dce0e4;
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    border: solid 1px #fff ;
+    justify-content: center;
+    border-radius: 10px;
+   
+}
+
+.hamburger-nav-container .hamburger-active{
+    text-decoration: none;
+    color: #f4f3f3;
+    background-color: #151a21;
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    border: solid 0px #fff;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+.hamburger-nav-container :hover{
+    background-color: orangered;
+    
+}
+
+@media only screen and (max-width:900px){
+    .card-container{
+        width: 340px;
+        margin-left:  auto;
+        margin-right: auto;
+        margin-top: 10px;
+        padding: 5px;
+    }
+
+    .left{
+        flex: 100%;
+        display:flex;
+        justify-content: center;
+    }
+
+    .right{
+        margin-left: 0px;
+        margin-top: 25px!;
+    }
+    section{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 5px;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    .download{
+        flex-direction: row!;
+        margin-left: 50px;
+    }
+    .social{
+        align-items: center;
+        margin-left: 90px;
+        
+    }
+    
+}
+
+@media only screen and (max-width:550px){
+    .card-container{
+        width: 340px;
+        margin-left:  auto;
+        margin-right: auto;
+        margin-top: 10px;
+        padding: 5px;
+    }
+
+
+    .item-collapse{
+        display:none;
+    }
+    .right{
+        flex-direction: column;
+        margin-right: auto;
+    }
+    #barsmenu{
+        display: block;
+        
+    }
+
 }
