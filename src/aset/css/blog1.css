@@ -1,0 +1,13 @@
+.nav-item:hover {
+    border-bottom: 2px solid orangered;
+}
+.card-title:hover{
+    border-bottom: 2px solid black;
+}
+
+
+@media only screen and (max-width: 900px){
+    .new{
+        justify-content: center;
+    }
+}

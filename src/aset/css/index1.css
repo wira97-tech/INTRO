@@ -1,0 +1,51 @@
+.nav-item:hover {
+    border-bottom: 2px solid orangered;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width:900px){
+    .fluid{
+        flex-wrap: wrap-reverse;
+    }
+    .aku{
+        align-items: center;
+        width:1000px;
+    }
+    .crd{
+        width: auto;
+    }
+}
+@media only screen and (max-width:550px){
+    .fluid{
+        flex-wrap: wrap-reverse;
+    }
+    .paragraf{
+        text-align: justify;
+    }
+    .crd{
+        width:100%;
+    }
+    .pic{
+        justify-content: center;
+        width:500px;
+    }
+    .img-container{
+        width: 500px;
+    }
+    
+    .stack{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: auto;
+    }
+}
+
+.stack{
+    flex-wrap: wrap;
+}

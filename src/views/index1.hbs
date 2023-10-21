@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Personal Blog</title>
+    </head>
+    <link rel="stylesheet" href="./css/index1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <body class="bg-dark-subtle">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-secondary fixed-top">
+            <div class="container">
+                <a class="navbar-brand me-5" href="/index1">
+                    <img src="/images/logo.png">
+                </a>
+              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-2">
+                        <a class="nav-link active text-danger fw-bold" href="/index1">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link " href="/blog1">My Project</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="./testimonial.html">Testimonials</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2" role="search">
+                  <a class="btn btn-dark" href="/contact1" role="button">Contact Me</a>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <!-- End Navbar -->
+        <!-- Card -->
+        <div style="height: auto;">
+          <div class=" container mx-auto mb-lg-0 " style="margin-top:150px;">
+            <div class="card bg-body-secondary  mx-auto shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body crd">
+               <ul class="d-flex fluid" style="list-style-type:none;">
+                <li class="justify-content-center " style="text-align: justify;">
+                  <h3 class="fw-bold mb-3">Welcome To My Project</h3>
+                  <p class="fs-5 fw-semibold me-1 ms-auto paragraf">
+                  Halo nama saya Putu Wiranto Pranata.
+                  Saya seorang lulusan S1 Pendidikan Matematika yang tertarik dengan dunia coding. 
+                  Suka mengulik dunia teknologi dan senang membahasnya bersama teman nyata maupun teman maya.
+                  Bermimpi bisa pindah ke negara (jika kesampaian) Swiss agar mempunyai hidup yang lebih tenang ketimbang hidup dinegara wakanda yang pejabatnya suka korupsi. Semoga impian saya dan impian teman-teman semua dikabulkan oleh Tuhan Yang Maha Esa.</p>
+                  <div class="d-flex">
+                    <p class="fw-bold me-2">Download My CV</p>
+                    <i class="fa-solid fa-download align-middle fs-5"></i>
+                  </div >
+                  <i class="fa-brands fa-linkedin fs-2" ></i>&nbsp;
+                  <i class="fa-brands fa-instagram fs-2"></i>&nbsp;
+                  <i class="fa-brands fa-facebook fs-2"></i>&nbsp;
+                  <i class="fa-brands fa-twitter fa-2x1 fs-2"></i>&nbsp;
+                </li>
+                <li class="img-container">
+                  <div class="card mx-auto img-container" style="width: 14rem;">
+                    <img class="card-img-top pic" src="/images/aku.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-text text-center fw-semibold">Putu Wiranto Pranata</h5>
+                      <p class="card-text text-center">Fullstack Developer</p>
+                    </div>
+                  </div>
+                </li>
+               </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-5 bg-body-tertiary rounded" style="height:auto">
+          <div class="row">
+            <div class="col-sm text-center fw-bold fs-2">
+              <p>My Blog</p>
+            </div>
+          <!-- card-blog -->
+          <div class="d-flex mt-5 stack ">
+          {{#each blogs}}
+            <div class="card mx-auto bg-body-secondary shadow p-3 mb-5 bg-white rounded stack" 
+                 style="width: 20rem; height: auto;">
+              <img src="/images/1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5>
+                <a href="/blog-detail" class="card-title" style="text-decoration: none;">{{this.title}}</a>
+                </h5>
+               <p>Durasi: {{projectDuration}}</p>
+                <p class="card-text paragraf" style="text-align:justify">{{this.content}}</p>
+              <div class="icon fa-2x text-dark">
+              {{#if this.nodeJs}}
+                <a href=""><i class="fa-brands fa-node"></i></a>
+              {{/if}}
+              {{#if this.reactJs}}
+                <a href=""><i class="fa-brands fa-react"></i></a>
+              {{/if}}
+              {{#if this.java}}
+                <a href=""><i class="fa-brands fa-java"></i></a>
+              {{/if}}
+              {{#if this.php}}
+                <a href=""><i class="fa-brands fa-php"></i></a>
+              {{/if}}
+              </div>
+              
+              <li class="mt-4"style="list-style-type: none;">
+                <a class="btn btn-dark" style="width:30%">edit</a>
+                <a href="/delete-homeblog/{{@index}}"
+                   class="btn btn-dark"
+                   style="width:30%">delete</a>
+              </li>
+              </div>
+            </div>
+          {{/each}}
+          </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

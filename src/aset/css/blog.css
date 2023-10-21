@@ -385,6 +385,10 @@ margin-left: -55px;
   background-color: orangered;
   
 }
+.menu:hover{
+  border-bottom: 2px solid orangered;
+  color: #000;
+}
 
 @media only screen and (max-width: 900px){
   .blog-form .form-container{

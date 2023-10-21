@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>My Project</title>
+    </head>
+    <link rel="stylesheet" href="/css/blog1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <body class="bg-body-subtle">
+      <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-secondary fixed-top">
+            <div class="container">
+                <a class="navbar-brand me-5" href="/index1">
+                    <img src="/images/logo.png">
+                </a>
+              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="/index1">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link active text-danger fw-bold" href="/blog1">My Project</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="/testimonial">Testimonials</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2" role="search">
+                  <a class="btn btn-dark" href="/contact1" role="button">Contact Me</a>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <!-- dinamic-field -->
+          <div class="container">
+            <div class="mx-auto w-75" style="margin-top: 200px; width:200px;">
+              <a class="btn btn-dark " href="/addblog" style="width: 90px; justify-content: end;">add blog</a>
+            </div>
+             {{#each blogs}}
+            <div class="card mb-3 mx-auto mt-5 w-75 bg-subtle shadow p-3 mb-5 bg-white rounded">
+              <div class="row g-1 ms-2 mt-2 me-2">
+                <div class="col-md-4 mt-4">
+                  <img src="/images/1.jpg" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body mt-auto">
+                    <h3>
+                    <a class="card-title fw-b" 
+                       href ="/blog-detail/{{}}" 
+                       style="text-decoration: none;">{{this.title}}</a><br/>
+                    </h3>
+                    <a>{{this.createdAt}} | Author : {{this.author}}</a>
+                    <p class="card-text mt-2" 
+                       style="text-align: justify;">{{this.content}}</p>
+                      <div class="me-auto w-75">
+                      <a href="/editblog/{{@index}}"
+                         class="btn btn-dark " 
+                         style="width: 80px;">edit</a>
+                      <a href="/delete-blog/{{@index}}" 
+                         class="btn btn-danger" 
+                         style="width: 80px">delete
+                      </a>
+                      </div>
+                    <p class="card-text"><small class="text-body-secondary">{{this.waktu}}</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/js/blog.js"> </script>
+</html>

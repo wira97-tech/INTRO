@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Blog</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <Body class="bg-body-secondary">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-secondary fixed-top">
+            <div class="container">
+                <a class="navbar-brand me-5" href="/index1">
+                    <img src="./images/logo.png">
+                </a>
+              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-2">
+                        <a class="nav-link " href="/index1">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link active text-danger fw-bold" href="/blog1">Add Project</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="/testimonial">Testimonials</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2" role="search">
+                 <a class="btn btn-dark" href="/contact1" role="button">Contact Me</a>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <!-- End Navbar -->
+        <!-- form -->
+        <div class="container mb-5" style="margin-top: 80px;">
+            <h2 class="text-center fw-bold mb-5">ADD MY PROJECT</h2>
+      
+            <form 
+                class="w-60 mx-auto "
+                method="post"
+                action="/add-blog"
+            >
+              <div class="mb-3 ">
+                <label for="title" class="form-label ">Project Name</label>
+                <input type="text" name="title" class="form-control shadow p-3 mb-5 bg-white rounded" id="title">
+              </div>
+              <!-- date -->
+                <div class="d-flex mb-4 datepicker" style="list-style-type: none;">
+                    <li style="width:50%">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="date" class="form-control shadow p-3 mb-5 bg-white rounded" id="startDate" />
+                    </li>
+                    <li style="width: 50%">
+                        <label for="endDate" class="form-label">End Date</label>
+                        <input type="date" class="form-control shadow p-3 mb-5 bg-white rounded" id="endDate" />
+                    </li>
+                </div>
+                <!-- desc -->
+              <div class="mb-3">
+                <label for="content" class="form-label">Description</label>
+                <textarea class="form-control shadow p-3 mb-5 bg-white rounded" name="content" id="content" style="resize: none; height: 200px;"></textarea>
+              </div>
+              <!-- tech -->
+              <div class="d-flex w-auto">
+                    <li class="mb-3" style="list-style-type: none; width:50%;">
+                        <div class="mb-2">
+                            <input class="form-check-input" name="checkbox" type="checkbox" id="nodeJs">
+                            <label class="form-check-label" for="checkbox"> Node Js</label>
+                        </div>
+                        <div >
+                            <input class="form-check-input" name="checkbox" type="checkbox" id="reactJs">
+                            <label class="form-check-label" for="checkbox"> React Js</label>
+                        </div>
+                    </li>
+                    <li class="mb-3" style="list-style-type: none; width: 30%;">
+                        <div class="mb-2">
+                            <input class="form-check-input" name="checkbox" type="checkbox" id="nextJs">
+                            <label class="form-check-label" for="checkbox"> Next Js</label>
+                        </div>
+                        <div >
+                            <input class="form-check-input" name="checkbox" type="checkbox" id="TypeScript">
+                            <label class="form-check-label" for="checkbox"> Typescript</label>
+                        </div>
+                    </li>
+              </div>
+              <!-- end-tech -->
+              <div class="mb-3">
+                <label for="uploadImage" class="form-label">Upload Image</label>
+                <input type="file" class="form-control shadow p-3 mb-5 bg-white rounded" id="uploadImage">
+              </div>
+              <div class="d-flex justify-content-end mt-5">
+                <button type="submit" class="btn btn-dark px-3 py-1">Submit</button>
+              </div>
+            </form>
+        </div>
+    </Body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
+
+
+
+{{!-- <html>
+    <head>
+        <title>cuk</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <body>
+        
+      
+        {{#if isChecked}}
+            <i class="fas fa-check"></i>
+        {{else}}
+             <i class="far fa-times"></i>
+        {{/if}}  
+    </body>
+</html> --}}
+
